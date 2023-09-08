@@ -189,7 +189,7 @@ def tide_predict(model_dir, lat, lon, times,
         dh = infer_minor(hc, constituents, mjd, timesteps)
         h_pred += dh
 
-    return h_pred.squeeze()
+    return h_pred.squeeze(), hc
 
 
 def read_parameter_file(params_file, lat=None, lon=None, times=None):
